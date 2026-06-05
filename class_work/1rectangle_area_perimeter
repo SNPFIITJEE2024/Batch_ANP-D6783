@@ -1,0 +1,17 @@
+
+
+# Area and Perimeter of a Rectangle
+length = float(input("Enter Length: "))
+breadth = float(input("Enter Breadth: "))
+
+if length <= 0:
+    print("Error: Length must be greater than 0.")
+elif breadth <= 0:
+    print("Error: Breadth must be greater than 0.")
+else:
+    area = length * breadth
+    perimeter = 2 * (length + breadth)
+
+    print("Area =", area)
+    print("Perimeter =", perimeter)    
+

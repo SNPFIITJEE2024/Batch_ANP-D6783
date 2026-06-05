@@ -1,0 +1,8 @@
+p=int(input("enter principle amount")
+r=int(input("enter rate of interest")
+t=int(input("enter time in years")
+if: p<0 or r<0 or t<0
+print("invalid simple interest")
+else:
+simple_interest=(p*r*t)/100
+print("simple interest is: ",simple_interest)

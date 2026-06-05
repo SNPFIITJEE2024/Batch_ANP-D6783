@@ -1,0 +1,25 @@
+#2. Armstrong Number Checker Problem Statement: Accept a number from the user and check whether it is an Armstrong Number.
+
+
+# Accept an integer input from the user
+num = int(input("Enter a number: "))
+
+# Convert the number to a string to easily count the total digits
+num_str = str(num)
+num_digits = len(num_str)
+
+# Initialize a variable to store the sum of the powered digits
+sum_of_powers = 0
+
+# Loop through each individual digit in the number string
+for digit_char in num_str:
+    # Convert the character back to an integer
+    digit = int(digit_char)
+    # Raise the digit to the power of total digits and add to the sum
+    sum_of_powers += digit ** num_digits
+
+# Check if the calculated sum matches the original number
+if sum_of_powers == num:
+    print(f"{num} is an Armstrong Number")
+else:
+    print(f"{num} is not an Armstrong Number")
