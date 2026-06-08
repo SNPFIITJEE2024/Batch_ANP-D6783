@@ -1,0 +1,30 @@
+# wap to count & print the frequency of vowels in a sentence inputted by user
+
+sentence = input("enter the sentence").lower()
+
+vowel_count = {
+'a' == 0,
+'e' == 0,
+'i' == 0,
+'o' == 0,
+'u' == 0
+}
+for char in sentence:
+    if char == a:
+        vowel_count['a'] += 1
+    elif char == e:
+        vowel_count['e'] += 1
+    elif char == i:
+        vowel_count['i'] += 1
+    elif char == o:
+        vowel_count['o'] += 1
+    elif char == u:
+        vowel_count['u'] += 1
+    else:
+        pass
+
+print("\n final vowel frequency: ")
+
+
+for key in vowel_dictionary:
+    print(f"vowel '{key} appears {vowel_sict[key]} times")

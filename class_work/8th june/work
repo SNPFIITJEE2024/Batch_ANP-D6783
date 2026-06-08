@@ -1,0 +1,21 @@
+# WAP to input a sentence from user and count the no. of special character present in the sentences with & without using len function
+sentence = str(input("enter the sentence"))
+special_character_count = 0
+for char in  
+    if char.isalnum()sentence:
+        continue
+    elif char.isspace():
+        continue
+    else special_character_count += 1:
+print(f"no. of special character: {special_character_count}")
+
+
+
+
+
+
+
+
+
+
+
