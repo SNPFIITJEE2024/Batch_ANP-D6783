@@ -1,19 +1,42 @@
-5. Bus Seat Reservation Analysis
-Problem Statement
-A bus has seats represented as:
+# --- Step 1: Initialize the dataset and tracking variables ---
 seats = [1, 0, 1, 1, 0, 0, 1, 1, 1, 0]
-Where:
-• 1 → Seat Booked
-• 0 → Seat Available
-Write a program to:
-1. Count booked and available seats.
-2. Find the first available seat and stop searching immediately.
-3. Create a list of all available seat numbers.
-4. Determine whether the bus is more than 70% occupied.
-Expected Output
-Booked Seats: 6
-Available Seats: 4
-First Available Seat: 2
-Available Seat Numbers: [2, 5, 6, 10]
-Bus Occupancy: 60%
-Status: Not More Than 70% Occupied
+
+booked_count = 0
+available_count = 0
+
+available_seat_numbers = []
+first_available_seat = None
+
+# --- Step 2: Loop through seats tracking both index and booking status ---
+for index, status in enumerate(seats):
+    # Convert computer 0-index to human seat numbering (Seat 1, Seat 2, etc.)
+    seat_number = index + 1
+    
+    # 1. Evaluate booking status
+    if status == 1:
+        booked_count += 1
+    elif status == 0:
+        available_count += 1
+        available_seat_numbers.append(seat_number)
+        
+        # 2. Capture the very first available seat and lock it in
+        if first_available_seat is None:
+            first_available_seat = seat_number
+
+# --- Step 3: Calculate the occupancy percentage ---
+total_seats = len(seats)
+occupancy_percentage = (booked_count / total_seats) * 100
+
+# Determine if the bus is overcrowded (exceeds 70%)
+if occupancy_percentage > 70:
+    occupancy_status = "More Than 70% Occupied"
+else:
+    occupancy_status = "Not More Than 70% Occupied"
+
+# --- Step 4: Display the reservation metrics ---
+print(f"Booked Seats: {booked_count}")
+print(f"Available Seats: {available_count}")
+print(f"First Available Seat: {first_available_seat}")
+print(f"Available Seat Numbers: {available_seat_numbers}")
+print(f"Bus Occupancy: {occupancy_percentage:.0f}%")
+print(f"Status: {occupancy_status}")

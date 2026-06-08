@@ -1,0 +1,23 @@
+# """ A mobile phone battery is charging . the level starts from
+#  20% and increased by 10% every charging cycle .Write a program 
+#  to display the battery percentage after each cycel and continue till the 
+#  battery reaches 100% 
+
+# """
+import time
+
+init = 20
+check = input("YES if pluged in , NO if not ")
+
+if check.lower() == "yes":
+    print("charging started 😉😉")
+    while init != 100:
+        print(f"the battery percentage is {init} %")
+        time.sleep(2)
+        init = init+10
+
+    else:
+        print("battery is fully charged !")
+
+else:
+    print("charger not connected!")
