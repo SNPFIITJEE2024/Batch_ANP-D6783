@@ -140,7 +140,7 @@ def reviews_with_keyword(review_list, keyword):
 
 
 # =====================================================================
-# Execution / Testing Program Block
+# Execution / Testinggit Program Block
 # =====================================================================
 
 # 1. Calculate, extract, and unpack sentiment tracking tallies
